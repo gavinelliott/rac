@@ -9,8 +9,7 @@ module.exports = function(grunt){
           sourcemap: true,
           includePaths: [
             'govuk_modules/govuk_template/assets/stylesheets',
-            'govuk_modules/govuk_frontend_toolkit/stylesheets',
-            'govuk_modules/govuk-elements-sass/'
+            'govuk_modules/govuk_frontend_toolkit/stylesheets'
           ],
           outputStyle: 'expanded'
         },
@@ -43,14 +42,14 @@ module.exports = function(grunt){
           dest: 'govuk_modules/govuk_frontend_toolkit/'
         },
         {
-          cwd: 'node_modules/govuk_template_jinja/assets/',
+          cwd: 'node_modules/govuk_template_mustache/assets/',
           src: '**',
           dest: 'govuk_modules/govuk_template/assets/'
         },
         {
           cwd: 'node_modules/govuk_template_jinja/views/layouts/',
           src: '**',
-          dest: 'govuk_modules/govuk_template/views/layouts/'
+          dest: 'govuk_modules/govuk_template_jinja/views/layouts/'
         },
         {
           cwd: 'node_modules/govuk-elements-sass/public/sass/',
@@ -60,11 +59,18 @@ module.exports = function(grunt){
       },
       govuk_template_jinja: {
         files: [{
-          cwd: 'govuk_modules/govuk_template/views/layouts/',
+          cwd: 'govuk_modules/govuk_template_jinja/views/layouts/',
           src: '**',
           dest: 'lib/'
         }]
-      }
+      },
+      govuk_elements: {
+        files: [{
+          cwd: 'govuk_modules/govuk-elements-sass',
+          src: ['**'],
+          dest: 'app/assets/sass/'
+        }]
+      },
     },
 
     // Watches assets and sass for changes

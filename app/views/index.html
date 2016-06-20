@@ -1,63 +1,74 @@
-{% extends "layout.html" %}
+{% extends "layout_dwp.html" %}
 
 {% block page_title %}
   GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
-
-<main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">The GOV.UK prototype kit</h1>
+      <h1 class="heading-xlarge">Customer details</h1>
 
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+        Either NI Number of Date of Birth details must be provided.
       </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="heading-medium">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-			<h2 class="heading-medium">Examples and documentation</h2>
-
-			<ul class="list list-bullet">
-				<li><a href="/examples">Example pages and patterns</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit/tree/master/docs">
-						Read the full documentation</a></li>
-			</ul>
-
-      <h2 class="heading-medium">Other resources</h2>
-
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
-
     </div>
   </div>
-</main>
 
+  <div class="grid-row">
+    <div class="column-one-third">
+      <legend class="form-label-bold">NI number</legend>
+      <label class="form-label" for="ni-number">e.g. AA263254A</label>
+      <input class="form-control" id="ni-number" type="text">
+    </div>
+
+    <div class="column-one-third">
+    <div class="form-group">
+      <fieldset>
+        <legend class="form-label-bold">Their date of birth</legend>
+        <div class="form-date">
+        <fieldset>
+          <div class="form-group form-group-day">
+            <label for="dob-day">Day</label>
+            <input class="form-control" name="dob-day" id="dob-day" type="text" maxlength="2">
+          </div>
+
+          <div class="form-group form-group-month">
+            <label for="dob-month">Month</label>
+          	<input class="form-control" name="dob-month" id="dob-month" type="text" maxlength="2">
+          </div>
+
+          <div class="form-group form-group-year">
+            <label for="dob-year">Year</label>
+          	<input class="form-control" name="dob-year" id="dob-year" type="text" maxlength="4">
+          </div>
+        </fieldset>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+      <label class="form-label" for="title">Title</label>
+      <select name="title">
+        <option value="mr">Mr</option>
+        <option value="mrs">Mrs</option>
+        <option value="sir">Sir</option>
+        <option value="dr">Dr</option>
+      </select>
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="surname">Surname</label>
+      <input class="form-control" id="surname" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="forenames">Forename(s)</label>
+      <input class="form-control" id="forenames" type="text">
+    </div>
+  </div>
 {% endblock %}
-
-
