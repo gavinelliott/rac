@@ -71,4 +71,141 @@
       <input class="form-control" id="forenames" type="text">
     </div>
   </div>
+  <br/>
+  <div class="grid-row">
+    <div class="column-one-third">
+      <form>
+        <fieldset class="inline">
+          <label class="form-label">Resident of the UK?</label>
+          <legend class="visuallyhidden">Is the customer a resident of the UK?</legend>
+
+          <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+            No
+          </label>
+
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="country-of-residence">Country of Residence</label>
+      <input class="form-control" id="country-of-residence" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="tel-number">Telephone number</label>
+      <input class="form-control" id="tel-number" type="text">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid-row">
+  <div class="column-one-half">
+    <h1 class="heading-small">
+      Is the caller, the customer?
+    </h1>
+
+    <form>
+      <fieldset class="inline">
+        <legend class="visuallyhidden">Is the caller, the customer?</legend>
+
+        <div class="form-group">
+            <label class="block-label" data-target="caller-customer-yes" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" data-target="caller-customer-no" for="radio-inline-4">
+              <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">
+              No
+            </label>
+          <div class="panel panel-border-narrow js-hidden" id="caller-customer-no">
+            <label class="form-label" for="callers-name">Caller's name</label>
+            <input class="form-control" name="callers-name" type="text" id="callers-name">
+            <br/>
+            <br/>
+            <label class="form-label" for="title">Relationship to customer</label>
+            <select name="title">
+              <option value="mr">Parent</option>
+              <option value="mrs">Guardian</option>
+              <option value="sir">Next of kin</option>
+              <option value="dr">Direct family member</option>
+            </select>
+            <br/>
+            <br/>
+            <form>
+              <fieldset class="inline">
+                <label class="form-label">Implicit consent granted?</label>
+                <legend class="visuallyhidden">Implicit consent granted?</legend>
+
+                <label class="block-label" for="radio-inline-5">
+                  <input id="radio-inline-5" type="radio" name="radio-inline-group-3" value="Y">
+                  Yes
+                </label>
+                <label class="block-label" for="radio-inline-6">
+                  <input id="radio-inline-6" type="radio" name="radio-inline-group-3" value="N">
+                  No
+                </label>
+
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <hr>
+  </div>
+
+
+  <div class="column-one-half">
+    <h1 class="heading-small">
+      Call, is also for partner?
+    </h1>
+
+    <form>
+      <fieldset class="inline">
+        <legend class="visuallyhidden">Call, is also for partner?</legend>
+
+        <div class="form-group">
+            <label class="block-label" data-target="caller-partner-yes" for="radio-inline-7">
+              <input id="radio-inline-7" type="radio" name="radio-inline-group-4" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" data-target="caller-partner-no" for="radio-inline-8">
+              <input id="radio-inline-8" type="radio" name="radio-inline-group-4" value="No">
+              No
+            </label>
+          <div class="panel panel-border-narrow js-hidden" id="caller-partner-yes">
+            <label class="form-label" for="partner-ni">Partner NI number</label>
+            <input class="form-control" name="partner-ni" type="text" id="partner-ni">
+            <br/>
+            <br/>
+            <label class="form-label" for="partner-surname">Partner surname</label>
+            <input class="form-control" name="partner-surname" type="text" id="partner-surname">
+            <br/>
+            <br/>
+            <label class="form-label" for="partner-forename">Partner forename</label>
+            <input class="form-control" name="partner-forename" type="text" id="partner-forename">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <hr>
+  </div>
+</div>
+
+<br/>
+
+<div class="grid-row">
+  <input class="button" type="submit" value="Continue">
+</div>
+
+
 {% endblock %}

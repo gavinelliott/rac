@@ -58,4 +58,14 @@
     font-size: 16px;
 }
 
+.form-label {
+  margin-bottom: 5px;
+}
+
+.break {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
 @import 'admin-menu';

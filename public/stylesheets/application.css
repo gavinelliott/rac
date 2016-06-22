@@ -1455,7 +1455,7 @@ legend .form-label-bold {
 
 @media (min-width: 641px) {
   .form-control {
-    width: 50%;
+    width: 75%;
   }
 }
 
@@ -1967,6 +1967,16 @@ input[type=number] {
 
 .built-by-dwp {
   font-size: 16px;
+}
+
+.form-label {
+  margin-bottom: 5px;
+}
+
+.break {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
 }
 
 .admin-header-wrapper {

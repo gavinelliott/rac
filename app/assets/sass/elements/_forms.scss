@@ -146,7 +146,7 @@ legend {
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
   @include media(tablet) {
-    width: 50%;
+    width: 75%;
   }
 
 }
