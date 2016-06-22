@@ -1,0 +1,282 @@
+{% extends "layout_dwp.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+       <a class="link-back" href="/">Back</a>
+      <h1 class="heading-xlarge">Death of customer</h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-quarter">
+      <label class="form-label" for="date-of-death">Date of death</label>
+      <input class="form-control" id="date-of-death" type="text">
+    </div>
+
+    <div class="column-one-quarter">
+      <form>
+        <fieldset class="inline">
+          <label class="form-label">Suspense input</label>
+          <legend class="visuallyhidden">Suspense input</legend>
+
+          <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+            No
+          </label>
+
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="column-one-quarter">
+      <form>
+        <fieldset class="inline">
+          <label class="form-label">Overpayment</label>
+          <legend class="visuallyhidden">Is there an overpayment?</legend>
+
+          <label class="block-label" for="overpayment-yes">
+            <input id="overpayment-yes" type="radio" name="radio-inline-group-2" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="overpayment-no">
+            <input id="overpayment-no" type="radio" name="radio-inline-group-2" value="No">
+            No
+          </label>
+
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="column-one-quarter">
+      <form>
+        <fieldset class="inline">
+          <label class="form-label">IPC360 required?</label>
+          <legend class="visuallyhidden">IPC360 required?</legend>
+
+          <label class="block-label" for="ipc360-yes">
+            <input id="ipc360-yes" type="radio" name="radio-inline-group-2" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="ipc360-no">
+            <input id="ipc360-no" type="radio" name="radio-inline-group-2" value="No">
+            No
+          </label>
+
+        </fieldset>
+      </form>
+    </div>
+</div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-large">Next of kin details</h2>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+      <div class="form-group">
+            <label class="form-label" for="select-box-a">Title</label>
+            <select class="form-control" id="select-box-a">
+              <option>Mr</option>
+              <option>Mrs</option>
+              <option>Dr</option>
+            </select>
+          </div>
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="surname">Surname</label>
+      <input class="form-control" id="surname" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="forenames">Forename(s)</label>
+      <input class="form-control" id="forenames" type="text">
+    </div>
+  </div>
+  <br/>
+  <div class="grid-row">
+    <div class="column-one-third">
+      <label class="form-label" for="address-line-1">Address Line 1</label>
+      <input class="form-control" id="address-line-1" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="address-line-2">Address line 2</label>
+      <input class="form-control" id="address-line-2" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="town">Town</label>
+      <input class="form-control" id="town" type="text">
+    </div>
+  </div>
+  <br/>
+  <div class="grid-row">
+    <div class="column-one-third">
+      <label class="form-label" for="country">Country</label>
+      <input class="form-control" id="country" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="postcode">Postcode</label>
+      <input class="form-control" id="postcode" type="text">
+    </div>
+
+    <div class="column-one-third">
+      <label class="form-label" for="contact-number">Contact number</label>
+      <input class="form-control" id="contact-number" type="text">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="grid-row">
+  <div class="column-one-half">
+    <h3 class="heading-small">
+      Conversion required?
+    </h3>
+
+    <form>
+      <fieldset class="inline">
+        <legend class="visuallyhidden">Is the caller, the customer?</legend>
+
+        <div class="form-group">
+            <label class="block-label" data-target="caller-customer-yes" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" data-target="caller-customer-no" for="radio-inline-4">
+              <input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">
+              No
+            </label>
+          <div class="panel panel-border-narrow js-hidden" id="caller-customer-yes">
+            <h4 class="heading-small">Surviving partner details</h4>
+            <label class="form-label" for="partner-ni">Partner's NI number</label>
+            <input class="form-control" name="partner-ni" type="text" id="partner-ni">
+            <br/>
+            <br/>
+            <label class="form-label" for="partner-dob">Partner's Date of birth</label>
+            <input class="form-control" name="partner-dob" type="text" id="partner-dob">
+            <br/>
+            <br/>
+            <label class="form-label" for="partner-surname">Partner's surname</label>
+            <input class="form-control" name="partner-surname" type="text" id="partner-ni">
+            <br/>
+            <br/>
+            <label class="form-label" for="partner-forename">Partner's forename</label>
+            <input class="form-control" name="partner-forename" type="text" id="partner-forename">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <hr>
+  </div>
+
+
+  <div class="column-one-half">
+    <h4 class="heading-small">
+      Arears due?
+    </h4>
+
+    <form>
+      <fieldset class="inline">
+        <legend class="visuallyhidden">Are there arears due?</legend>
+
+        <div class="form-group">
+            <label class="block-label" data-target="caller-partner-yes" for="radio-inline-7">
+              <input id="radio-inline-7" type="radio" name="radio-inline-group-4" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" data-target="caller-partner-no" for="radio-inline-8">
+              <input id="radio-inline-8" type="radio" name="radio-inline-group-4" value="No">
+              No
+            </label>
+          <div class="panel panel-border-narrow js-hidden" id="caller-partner-yes">
+            <h4 class="heading-small">Bank details</h4>
+              <div class="form-group">
+                <label class="block-label" data-target="bank-uk" for="radio-inline-9">
+                  <input id="radio-inline-9" type="radio" name="radio-inline-group-5" value="Yes">
+                  UK bank details
+                </label>
+                <label class="block-label" data-target="caller-partner-no" for="radio-inline-10">
+                  <input id="radio-inline-10" type="radio" name="radio-inline-group-5" value="No">
+                  Overseas bank details
+                </label>
+              <div class="panel panel-border-narrow js-hidden" id="bank-uk">
+                <form action="bank-details" method="POST">
+                      <div class="form-group">
+                        <fieldset>
+                          <label class="form-label-bold label-no-hint" for="ba-account-holder">Name of account holder</label>
+                          <input type="text" class="form-control" id="ba-account-holder" name="ba-account-holder" value="">
+                        </fieldset>
+                      </div>
+
+                      <legend class="form-label-bold">Sort code</legend>
+                      <div class="form-date form-group">
+                        <fieldset>
+                          <div class="form-group form-group-day">
+                            <label for="ba-sort1"></label>
+                            <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="" type="text">
+                          </div>
+
+                          <div class="form-group form-group-month">
+                            <label for="ba-sort2"></label>
+                            <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="" type="text">
+                          </div>
+
+                          <div class="form-group form-group-month">
+                            <label for="ba-sort3"></label>
+                            <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="" type="text">
+                          </div>
+                        </fieldset>
+                      </div>
+
+                      <div class="form-group">
+                        <fieldset>
+                          <label class="form-label-bold" for="ba-account-number">
+                            Account number
+                          </label>
+                          <input type="text" class="form-control" id="ba-account-number" name="ba-account-number" value="" maxlength="10">
+                        </fieldset>
+                      </div>
+
+                      <div class="form-group">
+                        <fieldset>
+                          <label class="form-label-bold" for="bs-society-roll">
+                            Building society roll or reference numbern (optional)
+                            <span class="form-hint">If your building society uses a roll or reference number, you will find it on your passbook</span>
+                          </label>
+                          <input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="" data-required="true">
+                        </fieldset>
+                      </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <hr>
+  </div>
+</div>
+
+<br/>
+
+<div class="grid-row">
+  <input class="button" type="submit" value="Continue" href="death-of-customer">
+</div>
+
+
+{% endblock %}

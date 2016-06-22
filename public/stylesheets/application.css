@@ -1922,14 +1922,12 @@ input[type=number] {
   padding-right: 0;
 }
 
-*:not(.token) {
-  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+/**:not(.token) {
+  font-family: $Helvetica-Regular;
 }
-
 #proposition-name {
-  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif !important;
-}
-
+  font-family: $Helvetica-Regular !important;
+}*/
 .unbranded {
   background: #fff;
 }
@@ -1977,6 +1975,11 @@ input[type=number] {
   width: 100%;
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
+}
+
+#global-header-bar {
+  max-width: 100%;
+  width: 100% !important;
 }
 
 .admin-header-wrapper {
